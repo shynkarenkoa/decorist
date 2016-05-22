@@ -1,0 +1,140 @@
+.cart {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.cart td,
+.cart a {
+  font-family: "Futura";
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.cart a {
+  color: #78a8bb;
+}
+.cart hr {
+  width: 190%;
+}
+.cart h2,
+.guarantee-text h2 {
+  font-family: "Justus";
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #222222;
+  line-height: 1.222;
+  text-transform: capitalize;
+  margin-right: 15px;
+}
+.cart section {
+  width: 53%;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0px 20px 0px 10%;
+}
+.cart section tr {
+  height: 20px;
+}
+.cart table {
+  margin: 22px 20px 20px;
+}
+.item,
+.remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.item {
+  width: 80%;
+}
+.item img {
+  margin-right: 10px;
+}
+.quantity input {
+  border-width: 0px;
+  width: 20px;
+  text-align: center;
+}
+.quantity,
+.price {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+  width: 15%;
+}
+.remove img {
+  margin-right: 5px;
+}
+.result {
+  background-color: #fafafa;
+  /*width: 560px;*/
+  height: 110px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.result a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 10px;
+}
+.result table {
+  color: #999999;
+  text-align: right;
+  width: 200px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.total {
+  font-weight: bolder;
+  color: #222222;
+}
+.cart picture {
+  width: 300px;
+}
+.nextPayment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 20px 20px;
+}
+.guarantee {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}

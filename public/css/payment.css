@@ -1,0 +1,46 @@
+.payment label,
+.payment select {
+  font-family: "Futura";
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #222222;
+}
+.payment hr {
+  margin: 15px 25px 15px 0px;
+}
+.payment {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.payment h2 {
+  margin-bottom: 20px;
+}
+.nameInfo,
+.cardInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.payment input,
+.payment select {
+  height: 25px;
+  margin-right: 10px;
+  border-radius: 3px;
+  text-align: center;
+}
+#cnumber,
+.cardInfo {
+  margin-bottom: 10px;
+}
+input[type='checkbox'] {
+  height: 12px;
+}
+#month {
+  width: 60px;
+  padding-left: 10px;
+}
+#year {
+  width: 70px;
+  padding-left: 10px;
+}
