@@ -1,0 +1,166 @@
+doctype html
+html(lang='en')
+  head
+    title Complete your order
+    meta(charset="utf-8")
+    script(src='./script/index.js' defer)
+    link(rel='stylesheet', type='text/css', href='./css/index.css')
+    link(rel='stylesheet', type='text/css', href='./css/cart.css')
+    link(rel='stylesheet', type='text/css', href='./css/payment.css')    
+    
+    mixin orderStep-nav(step, text)
+      a
+        ul(class= 'step'+step)
+          li.point= step
+          li= text    
+    
+    mixin footer-nav(partition, ...items)
+        article  
+          h2= partition
+          nav
+            ul
+              each item in items
+                li
+                  a= item
+    mixin billing(info, id, width, type)
+      div
+        label= info
+        br
+        input(id= id, style= 'width:'+ width+'px', type= type)
+
+
+
+  body
+    header
+      div.logoHead
+        img(src='./img/logo.png', alt='logotype')
+      ul.login 
+        li 
+          a Help
+        li
+          button login
+      div.titleArea
+        h1 complete your order
+        i Making interior design personal, affordable and easy
+    main  
+      nav
+        +orderStep-nav(1, 'View Cart')
+        +orderStep-nav(2, 'Payment')
+        +orderStep-nav(3, 'Additional Info')
+      
+      article.cart
+        section
+          div.order
+            table
+              tr
+                td
+                  h2 Your Shopping Cart
+                  a continue shoping
+              tr
+                td: hr
+              tr
+                td item
+                td quantity
+                td price
+                td change
+              tr
+                td: hr
+              tr.items
+                td.item
+                  img(src='./img/item.png', alt='item')
+                  p personal shopper package
+                td.quantity
+                  a.minus
+                    img(src='./img/circled-minus.png', alt='button minus quntity')
+                  input(value= 1)
+                  a.plus
+                    img(src='./img/circled-plus.png', alt='button plus quntity')
+                td.price $69.00
+                td.change
+                  a.remove
+                    img(src='./img/circled-corss.png', alt='button remove quntity')
+                    p remove
+            div.result
+              a.promo add promo code
+              table
+                tr 
+                  td subtotal
+                  td.subtotal $69.00
+                tr
+                  td tax
+                  td $0.00
+                tr
+                  td shipping
+                  td $0.00
+                tr
+                  td total
+                  td.total $69.00
+
+          div.payment(style= 'display: none')
+            h2 Your Billing Information
+            hr
+            div.nameInfo
+              +billing('first name', 'fname', 190)
+              +billing('last name', 'lname', 190)
+            +billing('zip code', 'zip', 100, 'number')
+            +billing('card number', 'cnumber', 260, 'number')
+            div.cardInfo
+              div
+                label expiration date
+                br
+                - var n = 01
+                select(name="month", id="month")
+                  while n <= 12
+                   if n<=9
+                     option(value='0' + n)= '0' + n++
+                   else
+                    option(value= n)= n++
+                 - var n = 2016
+                select(name="year", id="year")
+                  while n <= 2026
+                    option(value= n)= n++
+              +billing('cvv', 'cvv', 55, 'number')
+            input(type='checkbox') 
+            label save card for future use
+
+
+          div.additional(style= 'display: none')
+            h1 Congrats! Your order has been proceed
+            
+            
+          div.nextPayment
+            a.guarantee happiness guarantee!
+            button next payment
+        picture
+          img(src='./img/img1.png', alt='sofa')
+
+    footer
+      article
+        picture
+          img(src='./img/logoFooter.png', alt='logotype in footer')
+      +footer-nav('design', 'finds for you', 'designer advice', 'create a board')
+      +footer-nav('about', 'what is decorist?', 'help', 'meet our designers', 'terms of service', 'privacy policy')
+      +footer-nav('stay in touch', 'Blog', 'Facebook', 'Twitter', 'pinterest', 'email')
+
+    article#promice(hidden= true)
+        div.background
+        div.guarantee-text 
+          h1 happiness guarantee
+        
+          p
+           h2 Our Promise to You
+          p Decorist is all about you. When you order a designer service one of our experienced designers will review your profile, questionnaire, photos and anything else you have provided. They will develop a recommendation that is personal - one that reflects your lifestyle, style and budget.
+          p We really want you to love your recommendations and use them to transform your space. If you are not delighted with your recommendations please email us and we will make it right. We will work to make sure you get recommendations that make you, and your room, happy so you can fall in love with your home all over again. 
+        
+          p
+           h2 About Decorist Designers 
+          p Decorist designers are carefully selected for their ability to deliver great recommendations that reflect your style and budget. Our designers know which products work, how to pull a look together quickly and easily with a focus on key elements that will give you the most bang for your buck. Their product recommendations are made without consideration of any product commissions - all recommendations are based on what the designer thinks will look great and work for your space based on experience -- period. 
+      
+    div#promo(hidden= true)
+        div.background 
+        div
+          input
+          button apply
+      
+    
+    
